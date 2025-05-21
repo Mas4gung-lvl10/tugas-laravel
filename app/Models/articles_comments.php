@@ -6,20 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Articles_Comments extends Model
+class Article_Comments extends Model
 {
     use HasFactory;
 
     protected $table = 'article_comments'; 
 
-    protected $fillable = ['article_id', 'user_id', 'comment'];
+    protected $fillable = ['id', 'post_id', 'comment'];
 
     /**
      * Relasi ke model Article
      */
     public function article(): BelongsTo
     {
-        return $this->belongsTo(Article::class); // ✅ Perbaikan sintaks
+        return $this->belongsTo(Article::class, 'artcles'); // ✅ Perbaikan sintaks
     }
 
     /**

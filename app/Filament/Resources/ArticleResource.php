@@ -35,6 +35,10 @@ class ArticleResource extends Resource
                     ->label('Comment')
                     ->required(),
 
+                Forms\Components\Textarea::make('content')
+                ->label('Content')
+                ->required(), // tambahkan ini
+
                 Forms\Components\Hidden::make('user_id')
                     ->default(Auth::id()) // Set user_id berdasarkan user yang login
                     ->required(),
@@ -52,6 +56,12 @@ class ArticleResource extends Resource
 
                 Tables\Columns\TextColumn::make('description')
                     ->label('Comment')
+                    ->limit(50)
+                    ->sortable()
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('content')
+                    ->label('Content')
                     ->limit(50)
                     ->sortable()
                     ->searchable(),
