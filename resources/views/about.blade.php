@@ -13,11 +13,11 @@
         </p>
         <h3 class="mt-4">Team Members</h3>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">1. Member One</li>
-            <li class="list-group-item">2. Member Two</li>
-            <li class="list-group-item">3. Member Three</li>
-            <li class="list-group-item">4. Member Four</li>
-            <li class="list-group-item">5. Member Five</li>
+            <li class="list-group-item">1. Ziad</li>
+            <li class="list-group-item">2. Irsal</li>
+            <li class="list-group-item">3. Rian</li>
+            <li class="list-group-item">4. Satria januarta</li>
+            <li class="list-group-item">5. Agung</li>
         </ul>
         <h3 class="mt-4">Project Objectives</h3>
         <ul>
