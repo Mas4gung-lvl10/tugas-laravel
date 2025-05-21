@@ -20,8 +20,9 @@
     </header>
     <nav>
         <a href="#">Beranda</a>
-        <a href="#">Tentang</a>
-        <a href="#">Kontak</a>
+        <a href=" {{ route('about') }}">About</a>
+        <a href="{{ route('articles') }}">Article</a>
+        <a href="{{ route('api') }}">API</a>
     </nav>
     <div class="container">
         <h2>Halo, Selamat Datang!</h2>

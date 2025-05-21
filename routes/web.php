@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Article;
+use App\Http\Controllers\Homecontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
 });
 
 Route::get('/home', 'App\Http\Controllers\Homecontroller@home')->name('home');
 
+
+Route::get('/about', function () {
+    return view('about'); // pastikan view 'about.blade.php' juga ada
+})->name('about');
+
+
+Route::get('articles', [App\Http\Controllers\Homecontroller::class, 'articles'])->name('articles');
+
+Route ::get('/api', [Homecontroller::class, 'api'])->name('api');
